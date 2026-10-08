@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="DELETE">
+        <controller_preset/>
+        <includes/>
+        <macroponent display_value="Consulta de Disponibilidade">eff4514b83e7cf503d22a8d0deaad358</macroponent>
+        <name>Set Selected Date</name>
+        <preset/>
+        <required_translations>[]</required_translations>
+        <script><![CDATA[function handler({api, event, helpers, imports}) {
+
+    const data = event.payload.value;
+
+    console.log('===== DATA =====');
+    console.log('DATA SELECIONADA:', data);
+
+    api.setState('selected_date', data);
+
+    if (data) {
+        api.data.look_up_multiple_records_reservas.refresh();
+
+        console.log('Consulta de reservas atualizada pela DATA.');
+    }
+}
+]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-01 23:28:45</sys_created_on>
+        <sys_id>0a33eeeb83e307903d22a8d0deaad3eb</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Set Selected Date</sys_name>
+        <sys_package display_value="Gestao de Espacos" source="x_1026684_gestao_0">c869e29a83638b503d22a8d0deaad38c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Gestao de Espacos">c869e29a83638b503d22a8d0deaad38c</sys_scope>
+        <sys_update_name>sys_ux_client_script_0a33eeeb83e307903d22a8d0deaad3eb</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-05 16:16:33</sys_updated_on>
+        <target>macroponent</target>
+        <type>default</type>
+    </sys_ux_client_script>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Gestao de Espacos">c869e29a83638b503d22a8d0deaad38c</application>
+        <file_path/>
+        <instance_id>ac41da0f3b99435816e44a8aa4e45adc</instance_id>
+        <instance_name>dev402551</instance_name>
+        <name>sys_ux_client_script_0a33eeeb83e307903d22a8d0deaad3eb</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ux_client_script"&gt;&lt;sys_ux_client_script action="INSERT_OR_UPDATE"&gt;&lt;controller_preset/&gt;&lt;includes/&gt;&lt;macroponent display_value="Consulta de Disponibilidade"&gt;eff4514b83e7cf503d22a8d0deaad358&lt;/macroponent&gt;&lt;name&gt;Set Selected Date&lt;/name&gt;&lt;preset/&gt;&lt;required_translations&gt;[]&lt;/required_translations&gt;&lt;script&gt;&lt;![CDATA[function handler({api, event, helpers, imports}) {
+
+    const data = event.payload.value;
+
+    console.log('===== DATA =====');
+    console.log('DATA SELECIONADA:', data);
+
+    api.setState('selected_date', data);
+
+    if (data) {
+        api.data.look_up_multiple_records_reservas.refresh();
+
+        console.log('Consulta de reservas atualizada pela DATA.');
+    }
+}
+]]&gt;&lt;/script&gt;&lt;script_api_version&gt;2.0.0&lt;/script_api_version&gt;&lt;sys_class_name&gt;sys_ux_client_script&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-10-01 23:28:45&lt;/sys_created_on&gt;&lt;sys_id&gt;0a33eeeb83e307903d22a8d0deaad3eb&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_name&gt;Set Selected Date&lt;/sys_name&gt;&lt;sys_package display_value="Gestao de Espacos" source="x_1026684_gestao_0"&gt;c869e29a83638b503d22a8d0deaad38c&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Gestao de Espacos"&gt;c869e29a83638b503d22a8d0deaad38c&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ux_client_script_0a33eeeb83e307903d22a8d0deaad3eb&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-10-05 16:16:33&lt;/sys_updated_on&gt;&lt;target&gt;macroponent&lt;/target&gt;&lt;type&gt;default&lt;/type&gt;&lt;/sys_ux_client_script&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>267533828</payload_hash>
+        <record_name>Set Selected Date</record_name>
+        <reverted_from/>
+        <source>5a44659d83f743d03d22a8d0deaad378</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-07 03:38:20</sys_created_on>
+        <sys_id>7644a59d83f743d03d22a8d0deaad375</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a11470d3890000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 03:38:20</sys_updated_on>
+        <type>UX Client Script</type>
+        <update_guid>79ae75b4ac3f4f9059f965ce90507b26</update_guid>
+        <update_guid_history>79ae75b4ac3f4f9059f965ce90507b26:267533828,06246d5daef743d0cde3bde0a41c96f7:1432368400,79ae75b4ac3f4f9059f965ce90507b26:267533828,984083e7d6e70790eb69659d85c2ef31:1816201718,863b726f3aa70790735c2fd0f0cc8ab1:-193239850</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-07 10:53:24</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_client_script">sys_ux_client_script</sys_db_object>
+        <sys_id>9bb4031cc7834de9bd64ce849d892429</sys_id>
+        <sys_metadata>0a33eeeb83e307903d22a8d0deaad3eb</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Set Selected Date</sys_name>
+        <sys_package display_value="Gestao de Espacos" source="x_1026684_gestao_0">c869e29a83638b503d22a8d0deaad38c</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Gestao de Espacos">c869e29a83638b503d22a8d0deaad38c</sys_scope>
+        <sys_scope_delete display_value="">368dd46f12704faea74ad2b8335b76a4</sys_scope_delete>
+        <sys_update_name>sys_ux_client_script_0a33eeeb83e307903d22a8d0deaad3eb</sys_update_name>
+        <sys_update_version display_value="sys_ux_client_script_0a33eeeb83e307903d22a8d0deaad3eb">7644a59d83f743d03d22a8d0deaad375</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 10:53:24</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

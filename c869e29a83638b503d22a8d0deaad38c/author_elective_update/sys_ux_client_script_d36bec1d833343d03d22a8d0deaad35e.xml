@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="DELETE">
+        <controller_preset/>
+        <includes/>
+        <macroponent display_value="Consulta de Disponibilidade">eff4514b83e7cf503d22a8d0deaad358</macroponent>
+        <name>rich_text_1/now_default/html</name>
+        <preset/>
+        <required_translations>[]</required_translations>
+        <script><![CDATA[function evaluateProperty({api}) {
+
+    const data = api.state.selected_date;
+    const horario = api.state.selected_time;
+    const participantes = api.state.participants_count;
+
+    if (!data && !horario && !participantes) {
+        return 'Selecione data, horário e quantidade de participantes para consultar as salas.';
+    }
+
+    let dataFormatada = data || '—';
+
+    if (data) {
+        const somenteData = data.substring(0, 10);
+        const partes = somenteData.split('-');
+
+        if (partes.length === 3) {
+            dataFormatada =
+                partes[2] + '/' +
+                partes[1] + '/' +
+                partes[0];
+        }
+    }
+
+    return 'Salas disponíveis para ' +
+        (participantes || '—') +
+        ' participantes • ' +
+        dataFormatada +
+        ' às ' +
+        (horario || '—');
+}]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-07 01:55:43</sys_created_on>
+        <sys_id>d36bec1d833343d03d22a8d0deaad35e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>rich_text_1/now_default/html</sys_name>
+        <sys_package display_value="Gestao de Espacos" source="x_1026684_gestao_0">c869e29a83638b503d22a8d0deaad38c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Gestao de Espacos">c869e29a83638b503d22a8d0deaad38c</sys_scope>
+        <sys_update_name>sys_ux_client_script_d36bec1d833343d03d22a8d0deaad35e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 01:55:43</sys_updated_on>
+        <target>macroponent</target>
+        <type>transform</type>
+    </sys_ux_client_script>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Gestao de Espacos">c869e29a83638b503d22a8d0deaad38c</application>
+        <file_path/>
+        <instance_id>ac41da0f3b99435816e44a8aa4e45adc</instance_id>
+        <instance_name>dev402551</instance_name>
+        <name>sys_ux_client_script_d36bec1d833343d03d22a8d0deaad35e</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ux_client_script"&gt;&lt;sys_ux_client_script action="INSERT_OR_UPDATE"&gt;&lt;controller_preset/&gt;&lt;includes/&gt;&lt;macroponent display_value="Consulta de Disponibilidade"&gt;eff4514b83e7cf503d22a8d0deaad358&lt;/macroponent&gt;&lt;name&gt;rich_text_1/now_default/html&lt;/name&gt;&lt;preset/&gt;&lt;required_translations&gt;[]&lt;/required_translations&gt;&lt;script&gt;&lt;![CDATA[function evaluateProperty({api}) {
+
+    const data = api.state.selected_date;
+    const horario = api.state.selected_time;
+    const participantes = api.state.participants_count;
+
+    if (!data &amp;&amp; !horario &amp;&amp; !participantes) {
+        return 'Selecione data, horário e quantidade de participantes para consultar as salas.';
+    }
+
+    let dataFormatada = data || '—';
+
+    if (data) {
+        const somenteData = data.substring(0, 10);
+        const partes = somenteData.split('-');
+
+        if (partes.length === 3) {
+            dataFormatada =
+                partes[2] + '/' +
+                partes[1] + '/' +
+                partes[0];
+        }
+    }
+
+    return 'Salas disponíveis para ' +
+        (participantes || '—') +
+        ' participantes • ' +
+        dataFormatada +
+        ' às ' +
+        (horario || '—');
+}]]&gt;&lt;/script&gt;&lt;script_api_version&gt;2.0.0&lt;/script_api_version&gt;&lt;sys_class_name&gt;sys_ux_client_script&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-10-07 01:55:43&lt;/sys_created_on&gt;&lt;sys_id&gt;d36bec1d833343d03d22a8d0deaad35e&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;rich_text_1/now_default/html&lt;/sys_name&gt;&lt;sys_package display_value="Gestao de Espacos" source="x_1026684_gestao_0"&gt;c869e29a83638b503d22a8d0deaad38c&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Gestao de Espacos"&gt;c869e29a83638b503d22a8d0deaad38c&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ux_client_script_d36bec1d833343d03d22a8d0deaad35e&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-10-07 01:55:43&lt;/sys_updated_on&gt;&lt;target&gt;macroponent&lt;/target&gt;&lt;type&gt;transform&lt;/type&gt;&lt;/sys_ux_client_script&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-838029996</payload_hash>
+        <record_name>rich_text_1/now_default/html</record_name>
+        <reverted_from/>
+        <source>5a44659d83f743d03d22a8d0deaad378</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-07 03:38:21</sys_created_on>
+        <sys_id>8b44e59d83f743d03d22a8d0deaad300</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a11470d6be0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 03:38:21</sys_updated_on>
+        <type>UX Client Script</type>
+        <update_guid>e7cc49dd003743d01d045057c6d51dda</update_guid>
+        <update_guid_history>e7cc49dd003743d01d045057c6d51dda:-838029996,8a24ad5d23f743d068c570b271f6a853:319057504,e7cc49dd003743d01d045057c6d51dda:-838029996</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-07 10:53:27</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_client_script">sys_ux_client_script</sys_db_object>
+        <sys_id>030a2d8b8c014b4597cb1b55ff1ecfe9</sys_id>
+        <sys_metadata>d36bec1d833343d03d22a8d0deaad35e</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>rich_text_1/now_default/html</sys_name>
+        <sys_package display_value="Gestao de Espacos" source="x_1026684_gestao_0">c869e29a83638b503d22a8d0deaad38c</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Gestao de Espacos">c869e29a83638b503d22a8d0deaad38c</sys_scope>
+        <sys_scope_delete display_value="">368dd46f12704faea74ad2b8335b76a4</sys_scope_delete>
+        <sys_update_name>sys_ux_client_script_d36bec1d833343d03d22a8d0deaad35e</sys_update_name>
+        <sys_update_version display_value="sys_ux_client_script_d36bec1d833343d03d22a8d0deaad35e">8b44e59d83f743d03d22a8d0deaad300</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 10:53:27</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

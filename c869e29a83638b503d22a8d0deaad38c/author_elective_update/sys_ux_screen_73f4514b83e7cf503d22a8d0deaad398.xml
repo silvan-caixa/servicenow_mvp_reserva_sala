@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_screen">
+    <sys_ux_screen action="DELETE">
+        <active>true</active>
+        <app_config display_value="Consulta de Salas">c243158383e7cf503d22a8d0deaad31a</app_config>
+        <description/>
+        <disable_auto_reflow>true</disable_auto_reflow>
+        <disable_interoperable>false</disable_interoperable>
+        <event_mappings>[]</event_mappings>
+        <macroponent display_value="Consulta de Disponibilidade">eff4514b83e7cf503d22a8d0deaad358</macroponent>
+        <macroponent_config>{
+    "bare": {
+        "type": "JSON_LITERAL",
+        "value": true
+    },
+    "headerLevel": {
+        "type": "JSON_LITERAL",
+        "value": "1"
+    },
+    "headingOnlyVisibleToScreenReaders": {
+        "type": "JSON_LITERAL",
+        "value": false
+    },
+    "interceptNotifications": {
+        "type": "JSON_LITERAL",
+        "value": false
+    },
+    "label": {
+        "type": "JSON_LITERAL",
+        "value": ""
+    },
+    "propagateNotifications": {
+        "type": "JSON_LITERAL",
+        "value": false
+    },
+    "scrollable": {
+        "type": "JSON_LITERAL",
+        "value": "y"
+    }
+}</macroponent_config>
+        <name>Consulta de Disponibilidade</name>
+        <order>0</order>
+        <parent_macroponent display_value="Workspace App Shell">c276387cc331101080d6d3658940ddd2</parent_macroponent>
+        <required_translations>[ ]</required_translations>
+        <rollback_screen/>
+        <screen_condition/>
+        <screen_type display_value="Consulta de Disponibilidade">ebf45d4783e7cf503d22a8d0deaad337</screen_type>
+        <sys_class_name>sys_ux_screen</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-30 02:45:11</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>73f4514b83e7cf503d22a8d0deaad398</sys_id>
+        <sys_mod_count>104</sys_mod_count>
+        <sys_name>Consulta de Disponibilidade</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Gestao de Espacos" source="x_1026684_gestao_0">c869e29a83638b503d22a8d0deaad38c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Gestao de Espacos">c869e29a83638b503d22a8d0deaad38c</sys_scope>
+        <sys_update_name>sys_ux_screen_73f4514b83e7cf503d22a8d0deaad398</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 03:13:56</sys_updated_on>
+    </sys_ux_screen>
+    <sys_translated_text action="DELETE" query="documentkey=73f4514b83e7cf503d22a8d0deaad398"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Gestao de Espacos">c869e29a83638b503d22a8d0deaad38c</application>
+        <file_path/>
+        <instance_id>ac41da0f3b99435816e44a8aa4e45adc</instance_id>
+        <instance_name>dev402551</instance_name>
+        <name>sys_ux_screen_73f4514b83e7cf503d22a8d0deaad398</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ux_screen"><sys_ux_screen action="INSERT_OR_UPDATE"><active>true</active><app_config display_value="Consulta de Salas">c243158383e7cf503d22a8d0deaad31a</app_config><description/><disable_auto_reflow>true</disable_auto_reflow><disable_interoperable>false</disable_interoperable><event_mappings>[]</event_mappings><macroponent display_value="Consulta de Disponibilidade">eff4514b83e7cf503d22a8d0deaad358</macroponent><macroponent_config>{
+    "bare": {
+        "type": "JSON_LITERAL",
+        "value": true
+    },
+    "headerLevel": {
+        "type": "JSON_LITERAL",
+        "value": "1"
+    },
+    "headingOnlyVisibleToScreenReaders": {
+        "type": "JSON_LITERAL",
+        "value": false
+    },
+    "interceptNotifications": {
+        "type": "JSON_LITERAL",
+        "value": false
+    },
+    "label": {
+        "type": "JSON_LITERAL",
+        "value": ""
+    },
+    "propagateNotifications": {
+        "type": "JSON_LITERAL",
+        "value": false
+    },
+    "scrollable": {
+        "type": "JSON_LITERAL",
+        "value": "y"
+    }
+}</macroponent_config><name>Consulta de Disponibilidade</name><order>0</order><parent_macroponent display_value="Workspace App Shell">c276387cc331101080d6d3658940ddd2</parent_macroponent><required_translations>[ ]</required_translations><rollback_screen/><screen_condition/><screen_type display_value="Consulta de Disponibilidade">ebf45d4783e7cf503d22a8d0deaad337</screen_type><sys_class_name>sys_ux_screen</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-09-30 02:45:11</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>73f4514b83e7cf503d22a8d0deaad398</sys_id><sys_mod_count>104</sys_mod_count><sys_name>Consulta de Disponibilidade</sys_name><sys_overrides/><sys_package display_value="Gestao de Espacos" source="x_1026684_gestao_0">c869e29a83638b503d22a8d0deaad38c</sys_package><sys_policy/><sys_scope display_value="Gestao de Espacos">c869e29a83638b503d22a8d0deaad38c</sys_scope><sys_update_name>sys_ux_screen_73f4514b83e7cf503d22a8d0deaad398</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-10-07 03:13:56</sys_updated_on></sys_ux_screen><sys_translated_text action="delete_multiple" query="documentkey=73f4514b83e7cf503d22a8d0deaad398"/></record_update>]]></payload>
+        <payload_hash>1824708336</payload_hash>
+        <record_name>Consulta de Disponibilidade</record_name>
+        <reverted_from/>
+        <source>5a44659d83f743d03d22a8d0deaad378</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-07 03:38:21</sys_created_on>
+        <sys_id>8b44e59d83f743d03d22a8d0deaad30b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a11470d76a0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 03:38:21</sys_updated_on>
+        <type>UX Screen</type>
+        <update_guid>9dbe15d15bf743d03aee708a5c0a5256</update_guid>
+        <update_guid_history>9dbe15d15bf743d03aee708a5c0a5256:1824708336,4324ed5dfdf743d04774e73fa516eec6:0,5d5e701f95274390dff5754619bf6c2a:1824708336,50eff8dfea2743907a76d54ce5ee1efe:-1009205099,abdfb8df94274390ea1b1c05316f94d1:0,9ac9d1c3462bcf506423b71e8e23c05f:1824708336,fff4514b92e7cf50f2f2c6ad5fc6f89e:43898594</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-07 10:53:22</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_screen">sys_ux_screen</sys_db_object>
+        <sys_id>b5c37328ee464bd6b4e65b96164e9a64</sys_id>
+        <sys_metadata>73f4514b83e7cf503d22a8d0deaad398</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Consulta de Disponibilidade</sys_name>
+        <sys_package display_value="Gestao de Espacos" source="x_1026684_gestao_0">c869e29a83638b503d22a8d0deaad38c</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Gestao de Espacos">c869e29a83638b503d22a8d0deaad38c</sys_scope>
+        <sys_scope_delete display_value="">368dd46f12704faea74ad2b8335b76a4</sys_scope_delete>
+        <sys_update_name>sys_ux_screen_73f4514b83e7cf503d22a8d0deaad398</sys_update_name>
+        <sys_update_version display_value="sys_ux_screen_73f4514b83e7cf503d22a8d0deaad398">8b44e59d83f743d03d22a8d0deaad30b</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 10:53:22</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

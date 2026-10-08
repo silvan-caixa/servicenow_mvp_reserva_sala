@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="DELETE">
+        <controller_preset/>
+        <includes/>
+        <macroponent display_value="Consulta de Disponibilidade">eff4514b83e7cf503d22a8d0deaad358</macroponent>
+        <name>select_3/now_default/items</name>
+        <preset/>
+        <required_translations>[]</required_translations>
+        <script><![CDATA[function evaluateProperty({api, helpers}) {
+
+    const results = api.data.look_up_multiple_records_3.results || [];
+
+    const predioSelecionado = api.state.select_building;
+
+    //console.log('===== TESTE SELECT 3 =====');
+    //console.log('Prédio selecionado:', predioSelecionado);
+
+    /*results.forEach(function(record) {
+        console.log(
+            'Andar:',
+            record.identificacao_do_andar?.displayValue,
+            '| prédio:',
+            record.predio?.value,
+            '| prédio selecionado:',
+            predioSelecionado,
+            '| coincide:',
+            record.predio?.value === predioSelecionado
+        );
+    });
+    */
+
+    return results
+        .filter(function(record) {
+            return record.predio &&
+                   record.predio.value === predioSelecionado;
+        })
+        .map(function(record) {
+            return {
+                id: record._row_data.uniqueValue,
+                label: record.identificacao_do_andar.displayValue ||
+                       record.identificacao_do_andar.value
+            };
+        });
+}]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-30 18:09:47</sys_created_on>
+        <sys_id>cec4589783ef03903d22a8d0deaad370</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>select_3/now_default/items</sys_name>
+        <sys_package display_value="Gestao de Espacos" source="x_1026684_gestao_0">c869e29a83638b503d22a8d0deaad38c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Gestao de Espacos">c869e29a83638b503d22a8d0deaad38c</sys_scope>
+        <sys_update_name>sys_ux_client_script_cec4589783ef03903d22a8d0deaad370</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-06 23:38:43</sys_updated_on>
+        <target>macroponent</target>
+        <type>transform</type>
+    </sys_ux_client_script>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Gestao de Espacos">c869e29a83638b503d22a8d0deaad38c</application>
+        <file_path/>
+        <instance_id>ac41da0f3b99435816e44a8aa4e45adc</instance_id>
+        <instance_name>dev402551</instance_name>
+        <name>sys_ux_client_script_cec4589783ef03903d22a8d0deaad370</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ux_client_script"&gt;&lt;sys_ux_client_script action="INSERT_OR_UPDATE"&gt;&lt;controller_preset/&gt;&lt;includes/&gt;&lt;macroponent display_value="Consulta de Disponibilidade"&gt;eff4514b83e7cf503d22a8d0deaad358&lt;/macroponent&gt;&lt;name&gt;select_3/now_default/items&lt;/name&gt;&lt;preset/&gt;&lt;required_translations&gt;[]&lt;/required_translations&gt;&lt;script&gt;&lt;![CDATA[function evaluateProperty({api, helpers}) {
+
+    const results = api.data.look_up_multiple_records_3.results || [];
+
+    const predioSelecionado = api.state.select_building;
+
+    //console.log('===== TESTE SELECT 3 =====');
+    //console.log('Prédio selecionado:', predioSelecionado);
+
+    /*results.forEach(function(record) {
+        console.log(
+            'Andar:',
+            record.identificacao_do_andar?.displayValue,
+            '| prédio:',
+            record.predio?.value,
+            '| prédio selecionado:',
+            predioSelecionado,
+            '| coincide:',
+            record.predio?.value === predioSelecionado
+        );
+    });
+    */
+
+    return results
+        .filter(function(record) {
+            return record.predio &amp;&amp;
+                   record.predio.value === predioSelecionado;
+        })
+        .map(function(record) {
+            return {
+                id: record._row_data.uniqueValue,
+                label: record.identificacao_do_andar.displayValue ||
+                       record.identificacao_do_andar.value
+            };
+        });
+}]]&gt;&lt;/script&gt;&lt;script_api_version&gt;2.0.0&lt;/script_api_version&gt;&lt;sys_class_name&gt;sys_ux_client_script&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-09-30 18:09:47&lt;/sys_created_on&gt;&lt;sys_id&gt;cec4589783ef03903d22a8d0deaad370&lt;/sys_id&gt;&lt;sys_mod_count&gt;4&lt;/sys_mod_count&gt;&lt;sys_name&gt;select_3/now_default/items&lt;/sys_name&gt;&lt;sys_package display_value="Gestao de Espacos" source="x_1026684_gestao_0"&gt;c869e29a83638b503d22a8d0deaad38c&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Gestao de Espacos"&gt;c869e29a83638b503d22a8d0deaad38c&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ux_client_script_cec4589783ef03903d22a8d0deaad370&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-10-06 23:38:43&lt;/sys_updated_on&gt;&lt;target&gt;macroponent&lt;/target&gt;&lt;type&gt;transform&lt;/type&gt;&lt;/sys_ux_client_script&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-796231891</payload_hash>
+        <record_name>select_3/now_default/items</record_name>
+        <reverted_from/>
+        <source>5a44659d83f743d03d22a8d0deaad378</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-07 03:38:21</sys_created_on>
+        <sys_id>0f44a59d83f743d03d22a8d0deaad3fc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a11470d6a30000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 03:38:21</sys_updated_on>
+        <type>UX Client Script</type>
+        <update_guid>347dec51bb7343d06146252719c04cf9</update_guid>
+        <update_guid_history>347dec51bb7343d06146252719c04cf9:-796231891,7624ed5d5ff743d0f3bbad4b16440e9d:0,347dec51bb7343d06146252719c04cf9:-796231891,55808be7d2e707909158dab1dc8cd5e7:387984510,7ae36a6faae30790c578c070514077a2:1163816254,5afd24db7ba343901938d76a7c3d70b9:-1114452297,88eff8dfea274390e4442f034adacad1:1044656427,5afd24db7ba343901938d76a7c3d70b9:-1114452297,fb98e0130ea343902590b517649f7111:1026116913</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-07 10:53:26</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_client_script">sys_ux_client_script</sys_db_object>
+        <sys_id>dc57377c08b947769fcbc05aa20a27b9</sys_id>
+        <sys_metadata>cec4589783ef03903d22a8d0deaad370</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>select_3/now_default/items</sys_name>
+        <sys_package display_value="Gestao de Espacos" source="x_1026684_gestao_0">c869e29a83638b503d22a8d0deaad38c</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Gestao de Espacos">c869e29a83638b503d22a8d0deaad38c</sys_scope>
+        <sys_scope_delete display_value="">368dd46f12704faea74ad2b8335b76a4</sys_scope_delete>
+        <sys_update_name>sys_ux_client_script_cec4589783ef03903d22a8d0deaad370</sys_update_name>
+        <sys_update_version display_value="sys_ux_client_script_cec4589783ef03903d22a8d0deaad370">0f44a59d83f743d03d22a8d0deaad3fc</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 10:53:26</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

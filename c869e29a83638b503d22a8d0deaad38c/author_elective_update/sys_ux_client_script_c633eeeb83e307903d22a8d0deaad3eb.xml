@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="DELETE">
+        <controller_preset/>
+        <includes/>
+        <macroponent display_value="Consulta de Disponibilidade">eff4514b83e7cf503d22a8d0deaad358</macroponent>
+        <name>set Participants Count</name>
+        <preset/>
+        <required_translations>[]</required_translations>
+        <script><![CDATA[function handler({
+    api,
+    event,
+    helpers,
+    imports
+}) {
+
+    const participantes = event.payload.value || '';
+
+    console.log('===== PARTICIPANTES =====');
+    console.log('Participantes:', participantes);
+
+    api.setState('participants_count', participantes);
+
+    const filters = [];
+
+    if (api.state.select_building) {
+        filters.push('predio=' + api.state.select_building);
+    }
+
+    if (api.state.select_floor) {
+        filters.push('andar=' + api.state.select_floor);
+    }
+
+    filters.push('ativo_para_reserva=true');
+
+    if (participantes && !isNaN(Number(participantes))) {
+        filters.push('capacidade>=' + Number(participantes));
+    }
+
+    const roomFilter = filters.join('^');
+
+    const salasIndisponiveis = api.state.unavailable_rooms || [];
+
+    if (salasIndisponiveis.length > 0) {
+        roomFilter += '^sys_idNOT IN' + salasIndisponiveis.join(',');
+    }
+    console.log('ROOM FILTER:', roomFilter);
+    api.setState('room_filter', roomFilter);
+}]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-01 22:55:28</sys_created_on>
+        <sys_id>c633eeeb83e307903d22a8d0deaad3eb</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>set Participants Count</sys_name>
+        <sys_package display_value="Gestao de Espacos" source="x_1026684_gestao_0">c869e29a83638b503d22a8d0deaad38c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Gestao de Espacos">c869e29a83638b503d22a8d0deaad38c</sys_scope>
+        <sys_update_name>sys_ux_client_script_c633eeeb83e307903d22a8d0deaad3eb</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 00:03:05</sys_updated_on>
+        <target>macroponent</target>
+        <type>default</type>
+    </sys_ux_client_script>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Gestao de Espacos">c869e29a83638b503d22a8d0deaad38c</application>
+        <file_path/>
+        <instance_id>ac41da0f3b99435816e44a8aa4e45adc</instance_id>
+        <instance_name>dev402551</instance_name>
+        <name>sys_ux_client_script_c633eeeb83e307903d22a8d0deaad3eb</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ux_client_script"&gt;&lt;sys_ux_client_script action="INSERT_OR_UPDATE"&gt;&lt;controller_preset/&gt;&lt;includes/&gt;&lt;macroponent display_value="Consulta de Disponibilidade"&gt;eff4514b83e7cf503d22a8d0deaad358&lt;/macroponent&gt;&lt;name&gt;set Participants Count&lt;/name&gt;&lt;preset/&gt;&lt;required_translations&gt;[]&lt;/required_translations&gt;&lt;script&gt;&lt;![CDATA[function handler({
+    api,
+    event,
+    helpers,
+    imports
+}) {
+
+    const participantes = event.payload.value || '';
+
+    console.log('===== PARTICIPANTES =====');
+    console.log('Participantes:', participantes);
+
+    api.setState('participants_count', participantes);
+
+    const filters = [];
+
+    if (api.state.select_building) {
+        filters.push('predio=' + api.state.select_building);
+    }
+
+    if (api.state.select_floor) {
+        filters.push('andar=' + api.state.select_floor);
+    }
+
+    filters.push('ativo_para_reserva=true');
+
+    if (participantes &amp;&amp; !isNaN(Number(participantes))) {
+        filters.push('capacidade&gt;=' + Number(participantes));
+    }
+
+    const roomFilter = filters.join('^');
+
+    const salasIndisponiveis = api.state.unavailable_rooms || [];
+
+    if (salasIndisponiveis.length &gt; 0) {
+        roomFilter += '^sys_idNOT IN' + salasIndisponiveis.join(',');
+    }
+    console.log('ROOM FILTER:', roomFilter);
+    api.setState('room_filter', roomFilter);
+}]]&gt;&lt;/script&gt;&lt;script_api_version&gt;2.0.0&lt;/script_api_version&gt;&lt;sys_class_name&gt;sys_ux_client_script&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-10-01 22:55:28&lt;/sys_created_on&gt;&lt;sys_id&gt;c633eeeb83e307903d22a8d0deaad3eb&lt;/sys_id&gt;&lt;sys_mod_count&gt;7&lt;/sys_mod_count&gt;&lt;sys_name&gt;set Participants Count&lt;/sys_name&gt;&lt;sys_package display_value="Gestao de Espacos" source="x_1026684_gestao_0"&gt;c869e29a83638b503d22a8d0deaad38c&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Gestao de Espacos"&gt;c869e29a83638b503d22a8d0deaad38c&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ux_client_script_c633eeeb83e307903d22a8d0deaad3eb&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-10-07 00:03:05&lt;/sys_updated_on&gt;&lt;target&gt;macroponent&lt;/target&gt;&lt;type&gt;default&lt;/type&gt;&lt;/sys_ux_client_script&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1519543674</payload_hash>
+        <record_name>set Participants Count</record_name>
+        <reverted_from/>
+        <source>5a44659d83f743d03d22a8d0deaad378</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-07 03:38:21</sys_created_on>
+        <sys_id>c744a59d83f743d03d22a8d0deaad3e8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a11470d66b0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 03:38:21</sys_updated_on>
+        <type>UX Client Script</type>
+        <update_guid>6903305dec7343d007c57ba04bcd9147</update_guid>
+        <update_guid_history>6903305dec7343d007c57ba04bcd9147:1519543674,fa24ed5d0af743d0c2e42013cf946a98:0,6903305dec7343d007c57ba04bcd9147:1519543674,8ab1b499267343d01e11a6613a107373:507386524,341cf170a83f4f90c3903b696367f1f3:1897445132,b96317ef8a6b0790634c5289ee655264:-1165402024,904083e708e70790abd9389168e13b2c:-179170920,4df6722708a707903da0ebbc6e4cbfd9:-1188647560,7136baa351a70790454cd2475af818bc:-1355479992,6e93726ff06707901f896a7f8c0306c6:256637460</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-07 10:53:26</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_client_script">sys_ux_client_script</sys_db_object>
+        <sys_id>2c0f1cec2bc540048ee9bf4384950091</sys_id>
+        <sys_metadata>c633eeeb83e307903d22a8d0deaad3eb</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>set Participants Count</sys_name>
+        <sys_package display_value="Gestao de Espacos" source="x_1026684_gestao_0">c869e29a83638b503d22a8d0deaad38c</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Gestao de Espacos">c869e29a83638b503d22a8d0deaad38c</sys_scope>
+        <sys_scope_delete display_value="">368dd46f12704faea74ad2b8335b76a4</sys_scope_delete>
+        <sys_update_name>sys_ux_client_script_c633eeeb83e307903d22a8d0deaad3eb</sys_update_name>
+        <sys_update_version display_value="sys_ux_client_script_c633eeeb83e307903d22a8d0deaad3eb">c744a59d83f743d03d22a8d0deaad3e8</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 10:53:26</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

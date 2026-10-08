@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="DELETE">
+        <controller_preset/>
+        <includes/>
+        <macroponent display_value="Consulta de Disponibilidade">eff4514b83e7cf503d22a8d0deaad358</macroponent>
+        <name>Consulta Iniciada</name>
+        <preset/>
+        <required_translations>[]</required_translations>
+        <script><![CDATA[/**
+* @param {params} params
+* @param {api} params.api
+* @param {any} params.event
+* @param {any} params.imports
+* @param {ApiHelpers} params.helpers
+*/
+
+function handler({api, event, helpers, imports}) {
+
+    console.log('===== RESERVAS CONSULTADAS =====');
+
+    const reservas =
+        api.data.look_up_multiple_records_reservas.results || [];
+
+    console.log('===== DATA RESOURCES =====');
+    console.log(api.data);
+
+    console.log('===== LOOKUP RESERVA =====');
+    console.log(api.data.look_up_multiple_records_reservas);
+
+
+    console.log('Quantidade de reservas:', reservas.length);
+    console.log('Reservas:', reservas);
+
+    reservas.forEach(function(reserva, index) {
+
+        console.log(
+            'Reserva ' + index,
+            'Sala:', reserva.sala,
+            'Data:', reserva.data,
+            'Hora inicial:', reserva.hora_inicial,
+            'Hora final:', reserva.hora_final
+        );
+    });
+}
+]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-02 00:26:54</sys_created_on>
+        <sys_id>ca33eeeb83e307903d22a8d0deaad3eb</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Consulta Iniciada</sys_name>
+        <sys_package display_value="Gestao de Espacos" source="x_1026684_gestao_0">c869e29a83638b503d22a8d0deaad38c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Gestao de Espacos">c869e29a83638b503d22a8d0deaad38c</sys_scope>
+        <sys_update_name>sys_ux_client_script_ca33eeeb83e307903d22a8d0deaad3eb</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-02 01:17:44</sys_updated_on>
+        <target>macroponent</target>
+        <type>default</type>
+    </sys_ux_client_script>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Gestao de Espacos">c869e29a83638b503d22a8d0deaad38c</application>
+        <file_path/>
+        <instance_id>ac41da0f3b99435816e44a8aa4e45adc</instance_id>
+        <instance_name>dev402551</instance_name>
+        <name>sys_ux_client_script_ca33eeeb83e307903d22a8d0deaad3eb</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ux_client_script"&gt;&lt;sys_ux_client_script action="INSERT_OR_UPDATE"&gt;&lt;controller_preset/&gt;&lt;includes/&gt;&lt;macroponent display_value="Consulta de Disponibilidade"&gt;eff4514b83e7cf503d22a8d0deaad358&lt;/macroponent&gt;&lt;name&gt;Consulta Iniciada&lt;/name&gt;&lt;preset/&gt;&lt;required_translations&gt;[]&lt;/required_translations&gt;&lt;script&gt;&lt;![CDATA[/**
+* @param {params} params
+* @param {api} params.api
+* @param {any} params.event
+* @param {any} params.imports
+* @param {ApiHelpers} params.helpers
+*/
+
+function handler({api, event, helpers, imports}) {
+
+    console.log('===== RESERVAS CONSULTADAS =====');
+
+    const reservas =
+        api.data.look_up_multiple_records_reservas.results || [];
+
+    console.log('===== DATA RESOURCES =====');
+    console.log(api.data);
+
+    console.log('===== LOOKUP RESERVA =====');
+    console.log(api.data.look_up_multiple_records_reservas);
+
+
+    console.log('Quantidade de reservas:', reservas.length);
+    console.log('Reservas:', reservas);
+
+    reservas.forEach(function(reserva, index) {
+
+        console.log(
+            'Reserva ' + index,
+            'Sala:', reserva.sala,
+            'Data:', reserva.data,
+            'Hora inicial:', reserva.hora_inicial,
+            'Hora final:', reserva.hora_final
+        );
+    });
+}
+]]&gt;&lt;/script&gt;&lt;script_api_version&gt;2.0.0&lt;/script_api_version&gt;&lt;sys_class_name&gt;sys_ux_client_script&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-10-02 00:26:54&lt;/sys_created_on&gt;&lt;sys_id&gt;ca33eeeb83e307903d22a8d0deaad3eb&lt;/sys_id&gt;&lt;sys_mod_count&gt;3&lt;/sys_mod_count&gt;&lt;sys_name&gt;Consulta Iniciada&lt;/sys_name&gt;&lt;sys_package display_value="Gestao de Espacos" source="x_1026684_gestao_0"&gt;c869e29a83638b503d22a8d0deaad38c&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Gestao de Espacos"&gt;c869e29a83638b503d22a8d0deaad38c&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ux_client_script_ca33eeeb83e307903d22a8d0deaad3eb&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-10-02 01:17:44&lt;/sys_updated_on&gt;&lt;target&gt;macroponent&lt;/target&gt;&lt;type&gt;default&lt;/type&gt;&lt;/sys_ux_client_script&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-518613033</payload_hash>
+        <record_name>Consulta Iniciada</record_name>
+        <reverted_from/>
+        <source>5a44659d83f743d03d22a8d0deaad378</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-07 03:38:21</sys_created_on>
+        <sys_id>4744a59d83f743d03d22a8d0deaad3ec</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a11470d6890000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 03:38:21</sys_updated_on>
+        <type>UX Client Script</type>
+        <update_guid>9a24db23f5ab0790525b60140a5e0cf4</update_guid>
+        <update_guid_history>9a24db23f5ab0790525b60140a5e0cf4:-518613033,8224ad5d17f743d04f3de6594894dd4b:1422142691,9a24db23f5ab0790525b60140a5e0cf4:-518613033,a3c253af556b07909cc4547df042924c:-155447069,51b907abdd2b0790f197ef524fd61cc6:1422962335,b988cfe70e2b07904b28ec606e0cd2d1:-761896137</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-07 10:53:26</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_client_script">sys_ux_client_script</sys_db_object>
+        <sys_id>39596b4f36c649e7b3e9a8b157983771</sys_id>
+        <sys_metadata>ca33eeeb83e307903d22a8d0deaad3eb</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Consulta Iniciada</sys_name>
+        <sys_package display_value="Gestao de Espacos" source="x_1026684_gestao_0">c869e29a83638b503d22a8d0deaad38c</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Gestao de Espacos">c869e29a83638b503d22a8d0deaad38c</sys_scope>
+        <sys_scope_delete display_value="">368dd46f12704faea74ad2b8335b76a4</sys_scope_delete>
+        <sys_update_name>sys_ux_client_script_ca33eeeb83e307903d22a8d0deaad3eb</sys_update_name>
+        <sys_update_version display_value="sys_ux_client_script_ca33eeeb83e307903d22a8d0deaad3eb">4744a59d83f743d03d22a8d0deaad3ec</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 10:53:26</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

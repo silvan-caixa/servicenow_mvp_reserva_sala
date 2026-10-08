@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="DELETE">
+        <controller_preset/>
+        <includes/>
+        <macroponent display_value="Consulta de Disponibilidade">eff4514b83e7cf503d22a8d0deaad358</macroponent>
+        <name>Set Selected Floor</name>
+        <preset/>
+        <required_translations>[]</required_translations>
+        <script><![CDATA[function handler({api, event, helpers, imports}) {
+
+    const value = event.payload.value;
+    const andar = Array.isArray(value) ? value[0] : value;
+
+    api.setState('select_floor', andar);
+
+    let filters = [];
+
+    if (api.state.select_building) {
+        filters.push('predio=' + api.state.select_building);
+    }
+
+    if (andar) {
+        filters.push('andar=' + andar);
+    }
+
+    filters.push('ativo_para_reserva=true');
+
+    const roomFilter = filters.join('^');
+
+    console.log('========== SET SELECTED FLOOR ==========');
+    console.log('Prédio:', api.state.select_building);
+    console.log('Andar selecionado:', andar);
+    console.log('ROOM FILTER:', roomFilter);
+
+    const salasIndisponiveis = api.state.unavailable_rooms || [];
+
+if (salasIndisponiveis.length > 0) {
+    roomFilter += '^sys_idNOT IN' + salasIndisponiveis.join(',');
+}
+
+    api.setState('room_filter', roomFilter);
+}]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-30 19:43:42</sys_created_on>
+        <sys_id>2a18fcdb83a343903d22a8d0deaad363</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name>Set Selected Floor</sys_name>
+        <sys_package display_value="Gestao de Espacos" source="x_1026684_gestao_0">c869e29a83638b503d22a8d0deaad38c</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Gestao de Espacos">c869e29a83638b503d22a8d0deaad38c</sys_scope>
+        <sys_update_name>sys_ux_client_script_2a18fcdb83a343903d22a8d0deaad363</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-06 23:57:22</sys_updated_on>
+        <target>macroponent</target>
+        <type>default</type>
+    </sys_ux_client_script>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Gestao de Espacos">c869e29a83638b503d22a8d0deaad38c</application>
+        <file_path/>
+        <instance_id>ac41da0f3b99435816e44a8aa4e45adc</instance_id>
+        <instance_name>dev402551</instance_name>
+        <name>sys_ux_client_script_2a18fcdb83a343903d22a8d0deaad363</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ux_client_script"&gt;&lt;sys_ux_client_script action="INSERT_OR_UPDATE"&gt;&lt;controller_preset/&gt;&lt;includes/&gt;&lt;macroponent display_value="Consulta de Disponibilidade"&gt;eff4514b83e7cf503d22a8d0deaad358&lt;/macroponent&gt;&lt;name&gt;Set Selected Floor&lt;/name&gt;&lt;preset/&gt;&lt;required_translations&gt;[]&lt;/required_translations&gt;&lt;script&gt;&lt;![CDATA[function handler({api, event, helpers, imports}) {
+
+    const value = event.payload.value;
+    const andar = Array.isArray(value) ? value[0] : value;
+
+    api.setState('select_floor', andar);
+
+    let filters = [];
+
+    if (api.state.select_building) {
+        filters.push('predio=' + api.state.select_building);
+    }
+
+    if (andar) {
+        filters.push('andar=' + andar);
+    }
+
+    filters.push('ativo_para_reserva=true');
+
+    const roomFilter = filters.join('^');
+
+    console.log('========== SET SELECTED FLOOR ==========');
+    console.log('Prédio:', api.state.select_building);
+    console.log('Andar selecionado:', andar);
+    console.log('ROOM FILTER:', roomFilter);
+
+    const salasIndisponiveis = api.state.unavailable_rooms || [];
+
+if (salasIndisponiveis.length &gt; 0) {
+    roomFilter += '^sys_idNOT IN' + salasIndisponiveis.join(',');
+}
+
+    api.setState('room_filter', roomFilter);
+}]]&gt;&lt;/script&gt;&lt;script_api_version&gt;2.0.0&lt;/script_api_version&gt;&lt;sys_class_name&gt;sys_ux_client_script&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-09-30 19:43:42&lt;/sys_created_on&gt;&lt;sys_id&gt;2a18fcdb83a343903d22a8d0deaad363&lt;/sys_id&gt;&lt;sys_mod_count&gt;10&lt;/sys_mod_count&gt;&lt;sys_name&gt;Set Selected Floor&lt;/sys_name&gt;&lt;sys_package display_value="Gestao de Espacos" source="x_1026684_gestao_0"&gt;c869e29a83638b503d22a8d0deaad38c&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Gestao de Espacos"&gt;c869e29a83638b503d22a8d0deaad38c&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ux_client_script_2a18fcdb83a343903d22a8d0deaad363&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-10-06 23:57:22&lt;/sys_updated_on&gt;&lt;target&gt;macroponent&lt;/target&gt;&lt;type&gt;default&lt;/type&gt;&lt;/sys_ux_client_script&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1576699884</payload_hash>
+        <record_name>Set Selected Floor</record_name>
+        <reverted_from/>
+        <source>5a44659d83f743d03d22a8d0deaad378</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-07 03:38:20</sys_created_on>
+        <sys_id>7644a59d83f743d03d22a8d0deaad379</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a11470d3b40000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 03:38:20</sys_updated_on>
+        <type>UX Client Script</type>
+        <update_guid>ceb1b499437343d091d8b7347e2fa86d</update_guid>
+        <update_guid_history>ceb1b499437343d091d8b7347e2fa86d:1576699884,b224ed5d14f743d075d1f2629b79015d:0,ceb1b499437343d091d8b7347e2fa86d:1576699884,b81cf170b73f4f906f61c7a307600bd4:652820424,2efe7a2772e7079094adc49cece5b7a2:105486435,2693726f74670790edb91b39941feacc:726630235,534a26ab9d270790718b6de7a80edb6b:1306688893,9a409e67fb63079013c6b2a3e70cf1db:-1674178012,2d3a3cebb6a7c390c6180ef92c4b0f6a:-1062739132,ff87b4a7b7a7c390bf9cc8248fae348e:489230846,ad20bce72167c390e53c9e43cbcb35ae:-1493021333,0034e55bfc6b4390c6c4320bc9329916:-1817881181,6b1eb8db9b27439085e947ccec95ee90:1279577386,2bdfb8df0f274390368b9d143032d359:-1235492706,6b1eb8db9b27439085e947ccec95ee90:1279577386</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-07 10:53:25</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_client_script">sys_ux_client_script</sys_db_object>
+        <sys_id>58a1b242577b467bb98d68c552d3fc19</sys_id>
+        <sys_metadata>2a18fcdb83a343903d22a8d0deaad363</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Set Selected Floor</sys_name>
+        <sys_package display_value="Gestao de Espacos" source="x_1026684_gestao_0">c869e29a83638b503d22a8d0deaad38c</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Gestao de Espacos">c869e29a83638b503d22a8d0deaad38c</sys_scope>
+        <sys_scope_delete display_value="">368dd46f12704faea74ad2b8335b76a4</sys_scope_delete>
+        <sys_update_name>sys_ux_client_script_2a18fcdb83a343903d22a8d0deaad363</sys_update_name>
+        <sys_update_version display_value="sys_ux_client_script_2a18fcdb83a343903d22a8d0deaad363">7644a59d83f743d03d22a8d0deaad379</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-07 10:53:25</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
